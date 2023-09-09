@@ -18,7 +18,7 @@ int main(void)
 		{
 			putchar(i);
 			putchar(s);
-			if (i != 56 && s != 57)
+			if (i != 56)
 			{
 				putchar(44);
 				putchar(32);
