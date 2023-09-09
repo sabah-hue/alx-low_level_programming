@@ -18,6 +18,7 @@ int main(void)
 			for (s = i + 1; s <= 57; s++)
 			{
 				putchar(i);
+				putchar(x);
 				putchar(s);
 				if (i != 55)
 				{
