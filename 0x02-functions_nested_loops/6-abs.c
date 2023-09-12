@@ -4,19 +4,19 @@
  * _abs - entry point , input needed
  *
  * Description:  A function computes the absolute value of an integer.
- *@x: input to get his abs
+ *@n: input to get his abs
  *
  * Return: 0 in success case
  */
-int _abs(int x)
+int _abs(int n)
 {
-	if (x >= 0)
+	if (n >= 0)
 	{
-		_putchar('x');
+		_putchar('n');
 		return (0);
 	}
-	x = x * -1;
-	_putchar('x');
+	n = n * -1;
+	_putchar('n');
 	return (0);
 }
 
