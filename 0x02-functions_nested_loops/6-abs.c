@@ -6,7 +6,7 @@
  * Description:  A function computes the absolute value of an integer.
  *@n: input to get his abs
  *
- * Return: 0 in success case
+ * Return: abs of the input
  */
 int _abs(int n)
 {
