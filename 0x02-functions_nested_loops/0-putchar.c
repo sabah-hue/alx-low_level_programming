@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include "main.h"
 /**
  * main - entry point , no inputs needed
  * @c: The character to print
@@ -8,8 +9,6 @@
  *
  * Return: 0 in success case
  */
-
-int _putchar(char c);
 
 int main(void)
 {
