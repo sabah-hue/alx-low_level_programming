@@ -9,8 +9,8 @@
  */
 void jack_bauer(void)
 {
-	char m;
-	char s;
+	int m;
+	int s;
 
 	for (m = '00'; m <= '23'; m++)
 	{
