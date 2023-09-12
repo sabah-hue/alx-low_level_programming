@@ -3,7 +3,6 @@
 #include "main.h"
 /**
  * main - entry point , no inputs needed
- * @c: The character to print
  *
  * Description:  A function that print _putchar
  *
@@ -12,7 +11,15 @@
 
 int main(void)
 {
-	_putchar('_putchar');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
 
