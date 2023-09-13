@@ -20,8 +20,8 @@ void times_table(void)
 			_putchar(',');
 			if (i == 2 && j == 4)
 			{
-				_putchar('..');
-
+				_putchar('.');
+				_putchar('.');
 			}
 			else
 			{
