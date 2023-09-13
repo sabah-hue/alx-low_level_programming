@@ -19,7 +19,7 @@ void times_table(void)
 		{
 			if (i * j < 10)
 			{
-				if (j != 9)
+				if (j != 10)
 				{
 					_putchar(',');
 					_putchar(' ');
@@ -29,7 +29,7 @@ void times_table(void)
 			}
 			else
 			{
-				if (j != 9)
+				if (j != 10)
 				{
 					_putchar(',');
 					_putchar(' ');
