@@ -2,7 +2,7 @@
  * _isdigit - check the digits
  *
  *Description: cfunction to check the digits from 0 to 9
- @c: input parameter
+ *@c: input parameter
  *
  * Return:1 if digit , 0 otherwise
  */
