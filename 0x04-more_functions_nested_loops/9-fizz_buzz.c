@@ -6,9 +6,9 @@
  *
  * Description: a function that  print numbers from 1 to 100
  *
- * Return: no thing
+ * Return: 0 success
  */
-void main(void)
+int main(void)
 {
 	int n;
 
@@ -26,4 +26,5 @@ void main(void)
 			printf(" ");
 	}
 	printf("\n");
+	return (0);
 }
