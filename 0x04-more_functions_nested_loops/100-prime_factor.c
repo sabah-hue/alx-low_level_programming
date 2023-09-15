@@ -21,7 +21,7 @@ int main(void)
 		else if (remain % 2)
 			remain = remain / 2;
 	}
-	printf("%d", remain);
+	printf("%ld", remain);
 	printf("\n");
 	return (0);
 }
