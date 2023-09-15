@@ -12,14 +12,16 @@ void print_triangle(int size)
 {
 	int i;
 	int j;
+	int unHash;
 
 	if (size >= 0)
 	{
 		for (i = 1; i <= size; i++)
 		{
+			unHash = size - i - 1;
 			for (j = 1; j <= size; j++)
 			{
-				if (j <= size - i)
+				if (j < unHash)
 				{
 					_putchar(' ');
 				}
