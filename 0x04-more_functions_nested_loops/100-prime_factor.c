@@ -13,13 +13,13 @@ int main(void)
 	long i;
 	long factor;
 	long n = 612852475143;
+	double z = sqrt(n);
 
-	for (i = 1; i <= n * n; i++)
+	for (i = 1; i <= z; i++)
 	{
 		if (n % i == 0)
 			factor = n / i;
 	}
-	printf("%ld", factor);
-	printf("\n");
+	printf("%ld\n", factor);
 	return (0);
 }
