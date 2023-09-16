@@ -10,18 +10,15 @@
  */
 int main(void)
 {
-	long remain;
+	long i;
+	long factor;
 	long n = 612852475143;
 
-	if (n % 3 == 0)
+	for (i = 1; x <= n * n; i++)
 	{
-		remain = n / 3;
-		if (remain % 3 == 0)
-			remain = remain / 3;
-		else if (remain % 2)
-			remain = remain / 2;
+		if (n % i == 0)
+			factor = n / i;
 	}
-	printf("%ld", remain);
-	printf("\n");
+	printf("%ld", factor);
 	return (0);
 }
