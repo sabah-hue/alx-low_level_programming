@@ -14,7 +14,7 @@ int main(void)
 	long factor;
 	long n = 612852475143;
 
-	for (i = 1; x <= n * n; i++)
+	for (i = 1; i <= n * n; i++)
 	{
 		if (n % i == 0)
 			factor = n / i;
