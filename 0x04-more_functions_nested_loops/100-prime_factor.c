@@ -20,5 +20,6 @@ int main(void)
 			factor = n / i;
 	}
 	printf("%ld", factor);
+	printf("\n");
 	return (0);
 }
