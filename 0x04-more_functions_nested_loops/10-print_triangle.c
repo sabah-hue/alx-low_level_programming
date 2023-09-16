@@ -12,7 +12,6 @@ void print_triangle(int size)
 {
 	int i;
 	int j;
-	int unHash;
 	int y;
 
 	if (size <= 0)
@@ -23,14 +22,13 @@ void print_triangle(int size)
 	{
 		for (i = 0; i < size; i++)
 		{
-			unHash = size - i;
-			for (j = 0; j <= i; j++)
-			{
-				_putchar('#');
-			}
-			for (y = unHash; y > 1; y--)
+			for (j = size - i; j > 1; j--)
 			{
 				_putchar(32);
+			}
+			for (y = 0; y <= i; y++)
+			{
+				_putchar(35);
 			}
 			_putchar('\n');
 		}
