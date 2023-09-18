@@ -5,15 +5,20 @@
  *
  * Description: a function that prints string, reversed.
  * @s: input parameter
+ *
  * Return: nothing
  */
 void print_rev(char *s)
 {
 	int i;
+	int z;
 
-	for (i = strlen(s) - 1; i >= 0; i--)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		_putchar(s[i]);
+	}
+	for (z = i - 1; z >= 0; z--)
+	{
+		_putchar(s[z]);
 	}
 	_putchar("\n");
 }
