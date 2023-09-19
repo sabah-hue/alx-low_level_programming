@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * puts_half - print n elements of an array
+ * print_array - print n elements of an array
  *
  * Description: a function that  print n elements of an array.
  * @a: input array
