@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * reverse_array - compare strings
@@ -12,14 +11,14 @@
  */
 void reverse_array(int *a, int n)
 {
-	while (i < n)
+	int i;
+	int swap;
+
+	while (i < n / 2)
 	{
-		if (i != 0)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
-		printf("%d", a[n - i - 1]);
+		swap = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = swap;
 		i++;
 	}
 	_putchar('\n');
