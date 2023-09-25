@@ -22,10 +22,5 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
-	if (c == '\0' || s == '\0')
-	{
-		return (s);
-
-	}
-	return ('\0');
+	return (0);
 }
