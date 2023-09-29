@@ -16,9 +16,12 @@ int new_is_palindrome(char *s, int x, int i)
 	{
 		return (0);
 	}
-	if (s[x] == s[i])
+	if (i < (x / 2))
 	{
-		return (new_is_palindrome(s, x--, i++));
+		if (s[x] == s[i])
+		{
+			return (new_is_palindrome(s, x--, i++));
+		}
 	}
 	return (1);
 }
