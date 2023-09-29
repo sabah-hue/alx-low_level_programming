@@ -16,14 +16,11 @@ int new_is_palindrome(char *s, int x, int i)
 	{
 		return (0);
 	}
-	if (i < (x / 2))
+	if (i >= x)
 	{
-		if (s[x] == s[i])
-		{
-			return (new_is_palindrome(s, x--, i++));
-		}
+		return (1);
 	}
-	return (1);
+	return (new_is_palindrome(s, x--, i++));
 }
 /**
  * _strlen_recursion -  get the length of a string
