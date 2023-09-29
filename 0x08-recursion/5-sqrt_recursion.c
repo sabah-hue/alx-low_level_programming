@@ -21,13 +21,9 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	if (i * i == n)
-	{
-		return (i);
-	}
 	if ((n % i == 0) && (n / i == i))
 	{
-		return (-1);
+		return (i);
 	}
 	i++;
 	_sqrt_recursion(n);
