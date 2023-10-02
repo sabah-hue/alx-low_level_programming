@@ -7,7 +7,7 @@
  * @argc: variable store number of command line
  * @argv: array of character
  *
- * Return: 0 in success.
+ * Return: 0 in success, 1 in Error..
  **/
 int main(int argc, char *argv[])
 {
@@ -20,11 +20,10 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		a = argv[1];
-		b = argv[2];
+		a = *argv[1];
+		b = *argv[2];
 		result = a * b;
 		printf("%d\n", result);
 	}
 	return (0);
-
 }
