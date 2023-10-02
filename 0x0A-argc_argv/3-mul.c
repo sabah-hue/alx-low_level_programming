@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		result = argc[1] * argc[2];
-		printf("%d\n");
+		printf("%d\n", result);
 	}
 	return (0);
 
