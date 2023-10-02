@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		a = argc[1];
-		b = argc[2];
+		a = argv[1];
+		b = argv[2];
 		result = a * b;
 		printf("%d\n", result);
 	}
