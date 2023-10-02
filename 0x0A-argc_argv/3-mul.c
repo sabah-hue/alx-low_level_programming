@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main -  entry point.
@@ -20,8 +21,8 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		a = *argv[1];
-		b = *argv[2];
+		a = atoi(argv[1]);
+		b = atoi(argv[2]);
 		result = a * b;
 		printf("%d\n", result);
 	}
