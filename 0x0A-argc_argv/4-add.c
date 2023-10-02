@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		for (i = 0; argc > i; i++)
 		{
 			a = atoi(argv[i]);
-			if (*argv[i] < '0' || *argv[i] > '9')
+			if (!isdigit(a))
 			{
 				printf("Error\n");
 				return (1);
@@ -34,8 +34,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("Error\n");
-		return (1);
+		printf("0\n");
 	}
 	printf("%d\n", result);
 	return (0);
