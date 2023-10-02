@@ -11,7 +11,7 @@
  **/
 int main(int argc, char *argv[])
 {
-	int a, count;
+	int a, count, i;
 
 	if (argc == 2)
 	{
@@ -20,30 +20,18 @@ int main(int argc, char *argv[])
 		{
 			while (a > 0)
 			{
-				if (a - 25 > 0)
+				for (i = 1; i < 5; i++)
 				{
-					a = a - 25;
-					count++;
-				}
-				else if (a - 10 > 0 && a < 25)
-				{
-					a = a - 10;
-					count++;
-				}
-				else if (a - 5 > 0 && a < 10)
-				{
-					a = a - 5;
-					count++;
-				}
-				else if (a - 2 > 0 && a < 5)
-				{
-					a = a - 2;
-					count++;
-				}
-				else if (a - 1 > 0 && a < 2)
-				{
-					a = a - 1;
-					count++;
+					if (a - 25 > 0)
+					{
+						a = a - 25;
+						count++;
+					}
+					else if (a - x[i] > 0 && a < x[i - 1])
+					{
+						a = a - x[i];
+						count++;
+					}
 				}
 			}
 			printf("%d\n", count);
