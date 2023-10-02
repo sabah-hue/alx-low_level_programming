@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * main -  entry point.
@@ -13,26 +12,30 @@
  **/
 int main(int argc, char *argv[])
 {
-	int i;
-	int result;
+	int i, result, a;
 
 	result = 0;
 
-	if (argc == 0)
+	if (argc > 0)
 	{
-		printf("0\n");
+		for (i = 0; argc > i; i++)
+		{
+			a = atoi(argv[i]);
+			if (a >= 0 && a <= 9)
+			{
+				result = result + a;
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 	}
-	for (i = 0; argc > i; i++)
+	else
 	{
-		if (atoi(argv[i]) >= 0 && atoi(argv[i]) <= 9)
-		{
-			result = result + atoi(argv[i]);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		printf("Error\n");
+		return (1);
 	}
 	printf("%d\n", result);
 	return (0);
