@@ -12,6 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int a, count, i;
+	int x[] = {25, 10, 5, 2, 1};
 
 	if (argc == 2)
 	{
