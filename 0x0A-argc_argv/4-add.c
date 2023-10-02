@@ -21,14 +21,14 @@ int main(int argc, char *argv[])
 		for (i = 0; argc > i; i++)
 		{
 			a = atoi(argv[i]);
-			if (a >= 0 && a <= 9)
-			{
-				result = result + a;
-			}
-			else
+			if (*argv[i] >'a'  && *argv[i] < 'z')
 			{
 				printf("Error\n");
 				return (1);
+			}
+			else
+			{
+				result += a;
 			}
 		}
 	}
