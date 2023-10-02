@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
 
 	if (argc > 0)
 	{
-		for (i = 0; argc > i; i++)
+		for (i = 0; i < argc; i++)
 		{
 			a = atoi(argv[i]);
-			if (!isdigit(a))
+			if (a < 48 && a > 57)
 			{
 				printf("Error\n");
 				return (1);
@@ -31,11 +31,11 @@ int main(int argc, char *argv[])
 				result = result + a;
 			}
 		}
+		printf("%d\n", result);
 	}
 	else
 	{
 		printf("0\n");
 	}
-	printf("%d\n", result);
 	return (0);
 }
