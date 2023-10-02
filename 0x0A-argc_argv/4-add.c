@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 			c = srgv[i];
 
 			a = atoi(argv[i]);
-			if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z'))))
+			if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z'))
 			{
 				result = result + a;
 			}
