@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		for (i = 0; argc > i; i++)
 		{
 			a = atoi(argv[i]);
-			if (isdigit(*(argc[i])))
+			if (isdigit(a))
 			{
 				result = result + a;
 			}
