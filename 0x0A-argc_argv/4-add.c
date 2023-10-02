@@ -13,7 +13,6 @@
 int main(int argc, char *argv[])
 {
 	int i, result, a;
-	char c;
 
 	result = 0;
 
@@ -21,17 +20,15 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; argc > i; i++)
 		{
-			c = srgv[i];
-
 			a = atoi(argv[i]);
-			if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z'))
-			{
-				result = result + a;
-			}
-			else
+			if (*argv[i] < '0' || *argv[i] > '9')
 			{
 				printf("Error\n");
 				return (1);
+			}
+			else
+			{
+				result = result + a;
 			}
 		}
 	}
