@@ -11,7 +11,7 @@
  **/
 int main(int argc, char *argv[])
 {
-	int result;
+	int result, a, b;
 
 	if (argc == 0)
 	{
@@ -20,7 +20,9 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		result = argc[1] * argc[2];
+		a = argc[1];
+		b = argc[2];
+		result = a * b;
 		printf("%d\n", result);
 	}
 	return (0);
