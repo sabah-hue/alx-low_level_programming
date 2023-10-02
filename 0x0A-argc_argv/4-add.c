@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
  * main -  entry point.
@@ -14,6 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int i, result, a;
+	char c;
 
 	result = 0;
 
@@ -21,8 +21,10 @@ int main(int argc, char *argv[])
 	{
 		for (i = 0; argc > i; i++)
 		{
+			c = srgv[i];
+
 			a = atoi(argv[i]);
-			if (isdigit(a))
+			if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z'))))
 			{
 				result = result + a;
 			}
