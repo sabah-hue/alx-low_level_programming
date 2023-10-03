@@ -24,12 +24,12 @@ int main(int argc, char *argv[])
 			{
 				for (i = 1; i < 5; i++)
 				{
-					if (a - 25 > 0)
+					while (a - 25 > 0 && a > 25)
 					{
 						a = a - 25;
 						count++;
 					}
-					else if (a - x[i] > 0 && a < x[i - 1])
+					while (a - x[i] > 0 && a < x[i - 1])
 					{
 						a = a - x[i];
 						count++;
@@ -38,7 +38,10 @@ int main(int argc, char *argv[])
 			}
 			printf("%d\n", count);
 		}
-		printf("0\n");
+		else
+		{
+			printf("0\n");
+		}
 	}
 	else
 	{
