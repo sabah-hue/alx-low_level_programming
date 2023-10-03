@@ -21,15 +21,16 @@ int main(int argc, char *argv[])
 		for (i = 0; i < argc; i++)
 		{
 			a = atoi(argv[i]);
-			if (a < 48 && a > 57)
+			while (*argv[i] != '\0')
 			{
-				printf("Error\n");
-				return (1);
+				if (a < 48 && a > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+				argv[i]++;
 			}
-			else
-			{
 			result = result + a;
-			}
 		}
 		printf("%d\n", result);
 	}
