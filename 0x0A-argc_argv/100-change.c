@@ -12,8 +12,8 @@
  **/
 int main(int argc, char *argv[])
 {
-	int a, count, i;
-	int x[] = {25, 10, 5, 2, 1};
+	int a, cents, i;
+	int change[] = {25, 10, 5, 2, 1};
 
 	if (argc == 2)
 	{
@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
 					while (a - 25 > 0 && a > 25)
 					{
 						a = a - 25;
-						count++;
+						cents;
 					}
-					while (a - x[i] > 0 && a < x[i - 1])
+					while (a - change[i] > 0 && a < change[i - 1])
 					{
-						a = a - x[i];
-						count++;
+						a = a - change[i];
+						cents;
 					}
 				}
 			}
