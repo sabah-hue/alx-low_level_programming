@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	size = i + j;
-	a = malloc(size * 2 * sizeof(char) + 1);
+	a = malloc(size * 2 * sizeof(char));
 	if (a != NULL)
 	{
 		for (z = 0; z < size; z++)
@@ -32,12 +32,14 @@ char *str_concat(char *s1, char *s2)
 			{
 				a[z] = s1[z];
 				x++;
+				z++;
 			}
 			x = 0;
 			while (s2[x] != '\0')
 			{
 				a[z] = s2[x];
 				x++;
+				z++;
 			}
 		}
 	}
