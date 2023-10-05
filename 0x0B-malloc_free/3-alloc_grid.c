@@ -13,7 +13,7 @@ int **alloc_grid(int width, int height)
 {
 	int **twoDarray, i, j;
 
-	if (width < 0 || height < 0 || (width ==0 && height == 0))
+	if (width < 0 || height < 0 || (width == 0 && height == 0))
 		return (NULL);
 	twoDarray = malloc(sizeof(int *) * height);
 	if (twoDarray == NULL)
