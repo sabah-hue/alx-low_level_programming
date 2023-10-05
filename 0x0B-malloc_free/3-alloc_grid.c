@@ -31,7 +31,7 @@ int **alloc_grid(int width, int height)
 		}
 		else
 		{
-			while (i--)
+			for (i--; i >= 0; i--)
 			{
 				free(twoDarray[i]);
 			}
