@@ -14,18 +14,20 @@ char *str_concat(char *s1, char *s2)
 	char *a;
 	int i, j, z, size;
 
-	if (s1 == NULL)
-		s1 = '\0';
-	if (s2 == NULL)
-		s2 = '\0';
-	for (i = 0; s1[i] != '\0'; i++)
+	if (s1 != NULL)
 	{
+		for (i = 0; s1[i] != '\0'; i++)
+		{
+		}
 	}
-	for (j = 0; s2[j] != '\0'; j++)
+	if (s2 != NULL)
 	{
+		for (j = 0; s2[j] != '\0'; j++)
+		{
+		}
 	}
 	size = i + j;
-	a = malloc(size * sizeof(char) + 1);
+	a = malloc(sizeof(char) * size + 1);
 	if (a != NULL)
 	{
 		for (z = 0; z < size; z++)
