@@ -27,18 +27,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		for (z = 0; z < size; z++)
 		{
-			if (i == 0 || j == 0 || z == i)
-			{
-				a[z] = "";
-			}
 			x = 0;
-			while (s1[x] == '\0')
+			while (s1[x] != '\0')
 			{
 				a[z] = s1[z];
 				x++;
 			}
 			x = 0;
-			while (s2[x] == '\0')
+			while (s2[x] != '\0')
 			{
 				a[z] = s2[x];
 				x++;
