@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * alloc_grid - a pointer to a 2 dimensional array of integers.
@@ -14,11 +13,14 @@ int **alloc_grid(int width, int height)
 {
 	int **twoDarray, i, j;
 
-	if (width < 0 || height < 0)
+	if (width < 0 || height < 0 || (width ==0 && height == 0))
 		return (NULL);
 	twoDarray = malloc(sizeof(int *) * height);
 	if (twoDarray == NULL)
+	{
+		free(twoDarray);
 		return (NULL);
+	}
 	for (i = 0; i < height; i++)
 	{
 		twoDarray[i] = malloc(sizeof(int) * width);
