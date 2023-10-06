@@ -13,17 +13,17 @@ char **strtow(char *str)
 	int i, j;
 	char *a;
 
-	if (str == NULL || str == "")
+	if (str == NULL)
 		return (NULL);
-	for (i = 0; str != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 	}
 	a = malloc(sizeof(char) * i + 1);
 	if (a == NULL)
 		return (NULL);
-	for (i = 0; str != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; str != ' '; j++)
+		for (j = 0; str[j] != ' '; j++)
 		{
 			a[i][0] = str[j];
 		}
