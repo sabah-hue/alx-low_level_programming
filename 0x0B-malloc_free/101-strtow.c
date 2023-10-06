@@ -11,9 +11,9 @@
 char **strtow(char *str)
 {
 	int i, j;
-	char *a;
+	char **a;
 
-	if (str == NULL)
+	if (str == NULL || *str == 0)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -25,7 +25,7 @@ char **strtow(char *str)
 	{
 		for (j = 0; str[j] != ' '; j++)
 		{
-			a[i] = str[j];
+			a[i][0] = str[j];
 		}
 		a[i++] = '\n';
 	}
