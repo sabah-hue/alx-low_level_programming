@@ -13,12 +13,12 @@ char **strtow(char *str)
 	int i, j;
 	char **a;
 
-	if (str == NULL || *str == 0 || *str == " ")
+	if (str == NULL || *str == 0)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
 	}
-	a = malloc(sizeof(char *) * (i + 1));
+	a = malloc(sizeof(char **) * (i + 1));
 	if (a == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
