@@ -18,7 +18,7 @@ char **strtow(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 	}
-	a = malloc(sizeof(char*) * sizeof(char *) * (i + 1));
+	a = malloc(sizeof(char *) * sizeof(char *) * (2 * i + 1));
 	if (a == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
