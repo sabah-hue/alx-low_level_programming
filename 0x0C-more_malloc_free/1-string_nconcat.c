@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
+#include "main.h"
 
 /**
  * _strnlen -  get the string length.
