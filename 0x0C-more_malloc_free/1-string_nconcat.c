@@ -66,6 +66,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		a[x + 1] = s2[z];
 	}
-	a[x++} = '\0';
+	a[x++] = '\0';
 		return (a);
 }
