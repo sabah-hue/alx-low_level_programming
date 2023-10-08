@@ -1,25 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "main.h"
-
-/**
- * _strnlen -  get the string length.
- *
- * Description: a function that returns string length.
- * @s: input string
- *
- * Return: strnlen.
- **/
-int _strnlen(char *s)
-{
-	unsigned int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-	}
-	return (i);
-}
 
 /**
  * string_nconcat - concatenates two strings.
@@ -39,22 +20,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i, j, x, z;
 
 
-	if (s1 != NULL)
-		i = _strnlen(s1);
-	else
+	if (s1 == NULL)
+		s1 = "";
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		i = _strnlen("");
 	}
-	if (s2 != NULL)
+	if (s2 == NULL)
+		s2 = "";
+	for (j = 0; s2[j] != '\0'; j++)
 	{
-		j = _strnlen(s2);
-		if (n < j)
-			j = n;
 	}
-	else
-	{
-		j = _strnlen("");
-	}
+	if (n < j)
+		j = n;
 	a = malloc(sizeof(char) * (i + j + 1));
 	if (a == NULL)
 		return (NULL);
