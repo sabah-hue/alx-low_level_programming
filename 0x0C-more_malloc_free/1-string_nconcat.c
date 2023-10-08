@@ -37,7 +37,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *a;
 	unsigned int i, j, x, z;
 
-	z = 0;
 
 	if (s1 != NULL)
 		i = _strnlen(s1);
