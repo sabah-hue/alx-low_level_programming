@@ -56,17 +56,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		j = _strnlen("");
 	}
 	a = malloc(sizeof(char) * (i + j + 1));
-	for (x = 0; x < i + j + 1; x++)
-	{
-		if (x < i)
-			a[x] = s1[x];
-		if (x >= i)
-		{
-			a[x] = s2[z];
-			z++;
-		}
-	}
-		if (a != NULL)
-			return (a);
+	if (a == NULL)
 		return (NULL);
+	for (x = 0; x < i; i++)
+	{
+		a[x] = s1[x];
+	}
+	for (z = 0; z < j; j++)
+	{
+		a[x + 1] = s2[z];
+	}
+	a[x++} = '\0';
+		return (a);
 }
