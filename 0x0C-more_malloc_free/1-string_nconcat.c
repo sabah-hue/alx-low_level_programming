@@ -10,7 +10,7 @@
  *
  * Return: strnlen.
  **/
-int _strnlen(s)
+int _strnlen(char *s)
 {
 	int i;
 
@@ -54,7 +54,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		j = 0;
 	}
-	a = malloc(sizeof(char) * (i + j + 1);
+	a = malloc(sizeof(char) * (i + j + 1));
 		if (a != NULL)
 			return (a);
 		return (NULL);
