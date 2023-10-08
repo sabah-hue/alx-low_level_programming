@@ -61,9 +61,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	a = malloc(sizeof(char) * (i + j + 1));
 	for (x = 0; x < i + j + 1; x++)
 	{
-		if (x <= i)
+		if (x < i)
 			a[x] = s1[x];
-		else
+		if (x >= i)
 		{
 			a[x] = s2[z];
 			z++;
