@@ -69,6 +69,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			z++;
 		}
 	}
+	a[x++] = '\0';
 		if (a != NULL)
 			return (a);
 		return (NULL);
