@@ -5,8 +5,7 @@
  *
  * Description: a function that prints the name of file compiled from.
  *
- * Return: pointer to the newly created array,
- * return NULL in fails or min > max
+ * Return: 0 in success
  **/
 int main(void)
 {
