@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	i = 0;
-	while (i < argc)
+	while (i < number_of_bytes)
 	{
 		printf("%02hhx", opcode[i]);
 		if (i != number_of_bytes - 1)
