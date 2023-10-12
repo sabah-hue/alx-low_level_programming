@@ -11,7 +11,7 @@
  *
  * Return: 0 in success.
  **/
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int number_of_bytes, i;
 	char *opcode = (char *) main;
