@@ -14,9 +14,7 @@
 int main(int argc, char *argv)
 {
 	int number_of_bytes, i;
-	char *opcode;
-
-	opcode = (char *) main;
+	char *opcode = (char *) main;
 
 	if (argc != 2)
 	{
