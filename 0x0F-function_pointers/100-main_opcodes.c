@@ -14,6 +14,9 @@
 int main(int argc, char *argv)
 {
 	int number_of_bytes, i;
+	char *opcode;
+
+	opcode = (char *) main;
 
 	if (argc != 2)
 	{
@@ -29,7 +32,9 @@ int main(int argc, char *argv)
 	i = 0;
 	while (i < argc)
 	{
-
+		printf("%02hhx", opcode[i]);
+		if (i != number_of_bytes - 1)
+			printf(" ");
 		i++;
 	}
 	printf("\n");
