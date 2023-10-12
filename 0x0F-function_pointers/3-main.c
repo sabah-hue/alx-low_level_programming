@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "calc.h"
+#include "3-calc.h"
 
 /**
  * main - Entry point.
@@ -10,7 +10,7 @@
  *
  * Return: 0 in success.
  **/
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int num1, num2, calc;
 
