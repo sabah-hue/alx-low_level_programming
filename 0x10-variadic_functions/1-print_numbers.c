@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdarg.h>
-#include "variadic_functions.h"
+#include <stdio.h>
 
 /**
  ** print_numbers -  prints numbers, followed by a new line.
@@ -17,18 +17,20 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list myNumbers;
 
 	if (separator == NULL)
+	{
+		printf("\n");
 		return;
+	}
 	va_start(myNumbers, n);
 	for (i = 0; i < n; i++)
 	{
 		number = va_arg(myNumbers, unsigned int);
-		_putchar(number + '0');
 		if (i < n - 1)
 		{
-			_putchar(',');
-			_putchar(' ');
+			printf("%u, ", number);
 		}
+		else
+			printf("%u\n", number);
 	}
-	_putchar('\n');
 	va_end(myNumbers);
 }
