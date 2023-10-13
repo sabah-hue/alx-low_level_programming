@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
-
+#include "variadic_functions.h"
 /**
  *printInputChar - print input.
  *
@@ -12,7 +12,7 @@
  **/
 void printInputChar(char *separator, va_list parameters)
 {
-	printf("%s%c", separator, va_arg(parameters, int);
+	printf("%s%c", separator, va_arg(parameters, int));
 }
 /**
  * printInputInt - print input.
@@ -36,7 +36,7 @@ void printInputInt(char *separator, va_list parameters)
  **/
 void printInputDuble(char *separator, va_list parameters)
 {
-	printf("%s%d", separator, va_arg(parameters, double));
+	printf("%s%f", separator, va_arg(parameters, double));
 }
 /**
  * printInputDouble - print input.
@@ -50,9 +50,9 @@ void printInputString(char *separator, va_list parameters)
 {
 	char *s = va_arg(parameters, char *);
 
-	if (!s)
+	if (s == NULL)
 		s = "(nil)";
-	printf("%s%d", separator, s);
+	printf("%s%s", separator, s);
 }
 
 /**
@@ -72,17 +72,19 @@ void print_all(const char * const format, ...)
 		{"c", printInputChar},
 		{"i", printInputInt},
 		{"f", printInputDuble},
-		{"s", printInputString}
+		{"s", printInputString},
+		{NULL, NULL}
 	};
 
 	va_start(parameters, format);
-	while (format && formate[i])
+	while (format && format[i] != '\0')
 	{
-		while (myFormatChecks[j].myFormatCheck)
+		j = 0;
+		while (j < 4)
 		{
-			if (format[i] == FormatChecks[j].myFormatCheck[0])
+			if (format[i] == myFormatChecks[j].spsifier[0])
 			{
-				FormatChecks[j].printIt(separator, parameters);
+				myFormatChecks[j].printIt(separator, parameters);
 				separator = ", ";
 			}
 			j++;
