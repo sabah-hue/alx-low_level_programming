@@ -3,44 +3,58 @@
 #include <stdarg.h>
 
 /**
- *printInputs - print input.
+ *printInputChar - print input.
  *
- * @formatelist: type va_list of the arguments
+ * @parameters: type va_list of the arguments
+ * @separator: separate parameter
  *
  * Return: nothing
  **/
-void printInputs(const format)
+void printInputChar(char *separator, va_list parameters)
 {
-	int j = 0;
-	char *s, *separator = "";
-
-	while (formate[j])
-	{
-		switch (format[j])
-		{
-			case 'c':
-				printf("%s%c", separator, va_arg(parameters, int);
-				break;
-			case 'i':
-				printf("%s%d", separator, va_arg(parameters, int);
-				break;
-			case 'f':
-				printf("%s%f", separator, va_arg(parameters, double);
-				break;
-			case 's':
-				s = va_arg(parameters, char *);
-				if (s == NULL)
-					s = "(nil)";
-				printf("%s%s", separators, s);
-				break;
-			default:
-				j++;
-				continue;
-		}
-		separator = ", ";
-		j++
-	}
+	printf("%s%c", separator, va_arg(parameters, int);
 }
+/**
+ * printInputInt - print input.
+ *
+ * @parameters: type va_list of the arguments
+ * @separator: separate parameter
+ *
+ * Return: nothing
+ **/
+void printInputInt(char *separator, va_list parameters)
+{
+	printf("%s%d", separator, va_arg(parameters, int));
+}
+/**
+ * printInputDouble - print input.
+ *
+ * @parameters: type va_list of the arguments
+ * @separator: separate parameter
+ *
+ * Return: nothing
+ **/
+void printInputDuble(char *separator, va_list parameters)
+{
+	printf("%s%d", separator, va_arg(parameters, double));
+}
+/**
+ * printInputDouble - print input.
+ *
+ * @parameters: type va_list of the arguments
+ * @separator: separate parameter
+ *
+ * Return: nothing
+ **/
+void printInputString(char *separator, va_list parameters)
+{
+	char *s = va_arg(parameters, char *);
+
+	if (!s)
+		s = "(nil)";
+	printf("%s%d", separator, s);
+}
+
 /**
  * print_all -  prints strings, followed by a new line.
  *
@@ -52,13 +66,28 @@ void printInputs(const format)
 void print_all(const char * const format, ...)
 {
 	int i = 0, j = 0;
-	char *s;
+	char *separator = "";
 	va_list parameters;
+	myFormat myFormatChecks[] = {
+		{"c", printInputChar},
+		{"i", printInputInt},
+		{"f", printInputDuble},
+		{"s", printInputString}
+	};
 
-	va_start(myinputs, format);
-	if (format)
+	va_start(parameters, format);
+	while (format && formate[i])
 	{
-		printInputs(s, format);
+		while (myFormatChecks[j].myFormatCheck)
+		{
+			if (format[i] == FormatChecks[j].myFormatCheck[0])
+			{
+				FormatChecks[j].printIt(separator, parameters);
+				separator = ", ";
+			}
+			j++;
+		}
+		i++;
 	}
 	printf("\n");
 	va_end(parameters);
