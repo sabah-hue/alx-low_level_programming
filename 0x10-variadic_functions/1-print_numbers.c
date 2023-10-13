@@ -23,7 +23,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		number = va_arg(myNumbers, unsigned int);
 		_putchar(number + '0');
-		_putchar('\n');
+		if (i < n - 1)
+		{
+			_putchar(',');
+			_putchar(' ');
+		}
 	}
 	_putchar('\n');
 	va_end(myNumbers);
