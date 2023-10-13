@@ -27,10 +27,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		number = va_arg(myNumbers, unsigned int);
 		if (i < n - 1)
 		{
-			printf("%u, ", number);
+			printf("%d, ", number);
 		}
 		else
-			printf("%u\n", number);
+			printf("%d\n", number);
 	}
 	va_end(myNumbers);
 }
