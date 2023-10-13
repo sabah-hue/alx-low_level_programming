@@ -75,7 +75,7 @@ void print_all(const char * const format, ...)
 	myFormat myFormatChecks[] = {
 		{"c", printInputChar},
 		{"i", printInputInt},
-		{"f", printInputDuble},
+		{"f", printInputDouble},
 		{"s", printInputString},
 		{NULL, NULL}
 	};
