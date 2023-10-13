@@ -5,6 +5,7 @@
 /**
  *printInputChar - print input.
  *
+ * Description: a function that prints inputs.
  * @parameters: type va_list of the arguments
  * @separator: separate parameter
  *
@@ -17,6 +18,7 @@ void printInputChar(char *separator, va_list parameters)
 /**
  * printInputInt - print input.
  *
+ * Description: a function that prints inputs.
  * @parameters: type va_list of the arguments
  * @separator: separate parameter
  *
@@ -29,18 +31,20 @@ void printInputInt(char *separator, va_list parameters)
 /**
  * printInputDouble - print input.
  *
+ * Description: a function that prints.
  * @parameters: type va_list of the arguments
  * @separator: separate parameter
  *
  * Return: nothing
  **/
-void printInputDuble(char *separator, va_list parameters)
+void printInputDouble(char *separator, va_list parameters)
 {
 	printf("%s%f", separator, va_arg(parameters, double));
 }
 /**
- * printInputDouble - print input.
+ * printInputString - print input.
  *
+ * Description: a function that prints.
  * @parameters: type va_list of the arguments
  * @separator: separate parameter
  *
