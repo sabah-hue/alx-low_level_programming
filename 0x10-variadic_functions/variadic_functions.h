@@ -4,12 +4,13 @@
 #include <stdarg.h>
 
 /**
- * myFormatCheck - struct format
- *
+ * struct myFormatCheck - struct format
  * @spsifier: input formate
- * @printIt: a pointer to function 
+ * @printIt: a pointer to function
+ *
+ * Description: format struct
  */
-typedef struct myFormatCheck 
+typedef struct myFormatCheck
 {
 	char *spsifier;
 	void (*printIt)(char *, va_list);
