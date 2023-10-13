@@ -81,6 +81,11 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(parameters, format);
+	if (!format)
+	{
+		printf("\n");
+		return;
+	}
 	while (format && format[i] != '\0')
 	{
 		j = 0;
