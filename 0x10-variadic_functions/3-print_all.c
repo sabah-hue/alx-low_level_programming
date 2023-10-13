@@ -54,8 +54,11 @@ void printInputString(char *separator, va_list parameters)
 {
 	char *s = va_arg(parameters, char *);
 
-	if (s == NULL)
-		s = "(nil)";
+	switch ((int)(!s))
+	{
+		case 1:
+			s = "(nil)";
+	}
 	printf("%s%s", separator, s);
 }
 
@@ -86,7 +89,7 @@ void print_all(const char * const format, ...)
 		printf("\n");
 		return;
 	}
-	while (format && format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		j = 0;
 		while (j < 4)
