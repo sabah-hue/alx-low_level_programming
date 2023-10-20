@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 void executeFirst(void) __attribute__ ((constructor));
 /**
