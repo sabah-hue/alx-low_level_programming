@@ -15,7 +15,7 @@ void free_listint(listint_t *head)
 	if (head == NULL)
 		return;
 	removedNode = head;
-	while (removedNode->next != NULL)
+	while (removedNode != NULL)
 	{
 		node = removedNode->next;
 		free(removedNode);
