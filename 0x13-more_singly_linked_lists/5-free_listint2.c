@@ -12,8 +12,6 @@ void free_listint2(listint_t **head)
 {
 	listint_t *node, *removeNode;
 
-	if (head == NULL)
-		return;
 	removeNode = *head;
 	while (removeNode != NULL)
 	{
