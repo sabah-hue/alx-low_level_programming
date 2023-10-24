@@ -21,4 +21,5 @@ void free_listint2(listint_t **head)
 		free(removeNode);
 		removeNode = node;
 	}
+	*head = NULL;
 }
