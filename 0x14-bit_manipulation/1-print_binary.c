@@ -11,10 +11,12 @@
 void print_binary(unsigned long int n)
 {
 	int i, c;
+	unsigned long int num_shifted;
 
-	for (i = sizeof(n) * 8; i >= 0; --i)
+	for (i = sizeof(n) * 8; i >= 0; i--)
 	{
-		if ((n & 1) << i)
+		num_hifted = n >> i;
+		if (num_shifted & 1)
 		{
 			_putchar('1');
 			c++;
