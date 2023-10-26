@@ -12,9 +12,9 @@ void print_binary(unsigned long int n)
 {
 	int i, c;
 
-	for (i = sizeof(n) * 8; i >= 0; i--)
+	for (i = sizeof(n) * 8; i >= 0; --i)
 	{
-		if ((n >> i) & 1)
+		if ((n & 1) << i)
 		{
 			_putchar('1');
 			c++;
