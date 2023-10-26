@@ -13,6 +13,7 @@ void print_binary(unsigned long int n)
 	int i, c;
 	unsigned long int num_shifted;
 
+	c = 0;
 	for (i = sizeof(n) * 8; i >= 0; i--)
 	{
 		num_hifted = n >> i;
