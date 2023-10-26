@@ -12,7 +12,7 @@ void print_binary(unsigned long int n)
 {
 	int i;
 	int c = 0;
-	
+
 	if (n == 0)
 		_putchar('0');
 	for (i = sizeof(n) * 4; i >= 0; i--)
