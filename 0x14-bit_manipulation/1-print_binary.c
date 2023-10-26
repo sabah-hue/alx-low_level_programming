@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 
 	for (i = sizeof(n) * 8; i >= 0; i--)
 	{
-		if (n >> i & 1)
+		if ((n >> i) & 1)
 		{
 			_putchar('1');
 			c++;
