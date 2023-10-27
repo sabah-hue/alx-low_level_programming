@@ -17,10 +17,8 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int new_value;
 
 	x = sizeof(n) * 8 - 1;
-	if (n || m)
-	{
-		new_value = n ^ m;
-	}
+
+	new_value = n ^ m;
 	for (i = 0; i < x; i++)
 	{
 		if ((new_value & 1) == 1)
