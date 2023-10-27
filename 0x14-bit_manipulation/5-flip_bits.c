@@ -13,18 +13,19 @@
  **/
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int x, bits = 1, i;
+	unsigned int x, bits = 0, i;
+	unsigned long int new_value;
 
 	x = sizeof(n) * 8 - 1;
+	if (n || m)
+	{
+		new_value = n ^ m;
+	}
 	for (i = 0; i < x; i++)
 	{
-		n >>= 1;
-		m >>= 1;
-		if (n || m)
-		{
-			if ((n & 1) != (m & 1))
-				bits++;
-		}
+		if ((new_value & 1) == 1)
+			bits++;
+		new_value = new_value >> 1;
 	}
 	return (bits);
 }
