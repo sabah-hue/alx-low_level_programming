@@ -11,8 +11,7 @@
  **/
 int main(int ac, char **av)
 {
-	int file_from, file_to, j;
-	ssize_t n;
+	int file_from, file_to, j, n = 1024;
 	char buffer[1024];
 
 	if (ac != 3)
