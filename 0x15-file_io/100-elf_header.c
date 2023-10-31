@@ -39,6 +39,7 @@ int main(int ac, char **av)
 			exit(98);
 		}
 	}
+	printf("ELF Header:\n");
 	close_i = close(i);
 	if (close_i)
 		dprintf(STDERR_FILENO, "Error: Can't close file %d\n", close_i);
