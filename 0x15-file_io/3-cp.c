@@ -24,7 +24,7 @@ int main(int ac, char **av)
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	if (file_to < 0)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	while (n)
+	while (n == sizeof(buffer))
 	{
 		n = read(file_from, buffer, sizeof(buffer));
 		if (n < 0)
