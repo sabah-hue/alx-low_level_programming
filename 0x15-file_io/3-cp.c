@@ -1,5 +1,7 @@
 #include "main.h"
 
+#define VALIDATE (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
+
 /**
  ** main -  copies the content of a file to another file.
  *
@@ -19,8 +21,7 @@ int main(int ac, char **av)
 	file_from = open(av[1], O_RDONLY);
 	if (file_from < 0)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC,
-			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, VALIDATE);
 	if (file_to < 0)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	while (n == 1024)
