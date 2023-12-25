@@ -18,7 +18,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (my_table == NULL)
 		return (NULL);
 	my_table->size = size;
-	my_table->array = calloc(size, sizeof(hash_table_t **));;
+	my_table->array = calloc(size, sizeof(hash_table_t **));
 	if (my_table->array == NULL)
 	{
 		free(my_table);
