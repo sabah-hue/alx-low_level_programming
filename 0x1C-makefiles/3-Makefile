@@ -17,4 +17,4 @@ fclean: #deletes all Emacs and Vim temporary files, the executable, and the obje
 	clean oclean
 
 re: #forces recompilation of all source files
-	fclean all
+	oclean all
